@@ -32,9 +32,9 @@ export default function DropdownMenu({ title, items }) {
     >
       <a href="/services">{title}</a>
       {hovered && (
-        <ul className="absolute w-52 top-full left-0 bg-white text-black shadow-lg rounded mt-2 p-2">
+        <ul className="absolute w-52 top-full left-0 bgmorphismwhite text-black shadow-lg rounded mt-2 p-2">
           {items.map((item, index) => (
-            <li key={index} className="py-2 hover:text-blue-600">
+            <li key={index} className="py-2 hover:underline">
               <a href={item.href}>{item.label}</a>
             </li>
           ))}

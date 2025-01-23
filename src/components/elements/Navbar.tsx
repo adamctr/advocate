@@ -45,7 +45,7 @@ export default function Navbar() {
     <>
       {/* SIDEBAR */}
       <div
-        className={`fixed z-20 right-0 h-screen w-[320px] bgmorphism text-white transition-transform duration-300 ease-in-out ${
+        className={`fixed z-20 right-0 h-screen w-[320px] bgmorphism text-text transition-transform duration-300 ease-in-out ${
           opened ? "block translate-x-0" : "translate-x-full"
         }`}
       >
@@ -69,11 +69,11 @@ export default function Navbar() {
       </div>
 
       {/* NAVBAR */}
-      <div className="fixed z-10 h-16 left-1/2 w-[90%] -translate-x-1/2 top-4 text-white bgmorphism">
+      <div className="fixed z-10 h-16 left-1/2 w-[90%] -translate-x-1/2 top-4 text-text bgmorphism">
         <nav className="flex justify-between w-full px-8 py-4">
           <div className="flex gap-4 items-center">
-            <img src="logoeva.png" className="w-10" alt="logo" />
-            <h1 className="font-bold uppercase">Eva Nizard Dahan</h1>
+            <a href="/"><img src="logoeva.png" className="w-10" alt="logo" /></a>
+            <a href="/"><h1 className="font-bold uppercase">Eva Nizard Dahan</h1></a>
           </div>
           <ul className="hidden font-semibold sm:flex gap-8 relative">
             {/* DROITS DES AFFAIRES */}
@@ -104,7 +104,7 @@ export default function Navbar() {
 
       {/* BURGER */}
       <div
-        className={`burger fixed right-12 text-white top-9 z-50 sm:hidden tham tham-e-squeeze tham-w-8 ${
+        className={`burger fixed right-12 text-text top-9 z-50 sm:hidden tham tham-e-squeeze tham-w-8 ${
           opened ? "tham-active" : ""
         }`}
         onClick={() => setOpened(!opened)}
@@ -115,14 +115,14 @@ export default function Navbar() {
       </div>
 
       {/* FOOTER MOBILE */}
-      <div className="fixed sm:hidden text-white z-40 bgmorphism !rounded-none bottom-0 w-full flex flex-col px-4 py-2">
+      <div className="fixed sm:hidden text-text z-40 bgmorphism !rounded-none bottom-0 w-full flex flex-col px-4 py-2">
         <div className="flex gap-4">
           <img src="/mail.svg" alt="mail" />
           eva.nizard.dahan@gmail.com
         </div>
         <div className="flex gap-4">
           <img src="/phone.svg" alt="phone" />
-          04 81 72 83 91
+          <a href="tel:0481728391">04 81 72 83 91</a>
         </div>
       </div>
     </>

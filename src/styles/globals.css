@@ -2,20 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   line-height: 2rem;
+  font-size:17px;
+  color:#d8eaeb;
+}
+
+body {
+  background-color: rgb(80, 143, 143);
+  color:rgb(216, 234, 235);
+  font-family: "Montserrat", serif;
 }
 
 .sectionTitle {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.25rem; /* Correspond à text-xl */
+  font-size: 3rem; /* Correspond à text-xl */
+  line-height: 4rem;
   margin-bottom: 2rem; /* Correspond à mb-8 */
+}
+
+@media (width <= 750px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+.bgmorphismwhite {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px 0 rgb(216 234 235, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bgmorphism {
   background: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgb(216 234 235, 0.4);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border-radius: 10px;
