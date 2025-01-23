@@ -41,6 +41,15 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.bgmorphismaccent {
+  background: rgba(39, 39, 39, 0.822);
+  box-shadow: 0 8px 32px 0 rgb(216 234 235, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .bgmorphism {
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 8px 32px 0 rgb(216 234 235, 0.4);
@@ -52,4 +61,11 @@ body {
 
 .tham-inner {
   background-color: white !important;
+}
+
+.bgpattern {
+  background-color: #e5e5f7;
+  opacity: 0.3;
+  background-image: radial-gradient(circle at center center, #115e59, #e5e5f7), repeating-radial-gradient(circle at center center, #115e59, #115e59, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
 }

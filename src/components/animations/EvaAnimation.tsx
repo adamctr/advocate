@@ -17,7 +17,7 @@ export default function EvaAnimation() {
           start: "-650 top",
           end: "bottom top",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       });
     }
