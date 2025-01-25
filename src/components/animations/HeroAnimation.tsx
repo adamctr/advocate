@@ -9,8 +9,7 @@ export default function HeroAnimation() {
   useEffect(() => {
     // Animation GSAP avec ScrollTrigger pour l'image principale
     gsap.to("#heroImage", {
-      yPercent: -15, // Déplace l'image vers le haut à 30% du viewport
-      ease: "ease-in-out",
+      yPercent: -30,
       scrollTrigger: {
         trigger: "#heroImage",
         start: "top top",
@@ -22,13 +21,12 @@ export default function HeroAnimation() {
 
     // Animation GSAP pour le bouton "Me contacter"
     gsap.to("#contactButton", {
-      yPercent: -50,
-      ease: "ease-in-out",
+      yPercent: -500,
       scrollTrigger: {
-        trigger: "#evaSection",
-        start: "top bottom",
-        end: "bottom center",
-        scrub: true,
+        trigger: "#heroImage",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
         markers: false,
         toggleActions: "play reverse play reverse", // Ajout pour gérer l'effet boomerang
       },
@@ -42,7 +40,7 @@ export default function HeroAnimation() {
         trigger: "#bannerdesign",
         start: "top bottom",
         end: "bottom center",
-        scrub: true,
+        scrub: 1,
         markers: false,
         toggleActions: "play reverse play reverse", // Gestion de l'effet boomerang
       },
@@ -52,47 +50,35 @@ export default function HeroAnimation() {
     // Animation GSAP pour la description
     gsap.to("#heroDesc", {
       yPercent: -200,
-      ease: "ease-in-out",
       scrollTrigger: {
         trigger: "#heroImage",
         start: "top top",
         end: "bottom top",
-        scrub: true,
-        markers: false,
-      },
-    });
-
-    // Animation GSAP pour la description
-    gsap.to("#transipop", {
-      yPercent: -100,
-      ease: "ease-in-out",
-      scrollTrigger: {
-        trigger: "#heroImage",
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
+        scrub: 1,
         markers: false,
       },
     });
 
     gsap.to("main", {
       yPercent: -10,
-      ease: "ease-in-out",
       scrollTrigger: {
         trigger: "main",
-        start: "top 90%",
-        end: "bottom top",
-        scrub: true,
-        markers: true,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+        markers: false,
       },
     });
-
-
   }, []);
 
+  useEffect(() => {
+    document.body.classList.add("bg-accent");
 
-
-
+    return () => {
+      // Nettoyer la classe lorsqu'on quitte la page
+      document.body.classList.remove("bg-accent");
+    };
+  }, []);
 
   return null;
 }

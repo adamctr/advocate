@@ -7,15 +7,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/flyonui/dist/js/*.js"
   ],
-  flyonui: {
-    themes: [
-      {
-        mytheme: {
-          
-        }
-      }
-    ]
-  },
+
   theme: {
     extend: {
       colors: {
@@ -23,15 +15,14 @@ export default {
         foreground: "var(--foreground)",
         primary: "black",
         secondary: "gold",
-        text: "#d8eaeb",
-        accent: "#0b4f4a",
+        text: "#ebf1f2", //
+        accent: "#146F74",
       },
     },
   },
   plugins: [
     require('tailwind-hamburgers'),
-    require("flyonui"),
-    require("flyonui/plugin")
+
   ],
 
 } satisfies Config;

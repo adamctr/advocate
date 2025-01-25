@@ -60,9 +60,6 @@ export default function Navbar() {
             <a href="/services" className="link link-animated">Droits des sociétés</a>
           </li>
           <li>
-            <a href="/a-propos" className="link link-animated">À propos</a>
-          </li>
-          <li>
             <a href="/actualites" className="link link-animated">Actualités</a>
           </li>
         </ul>
@@ -90,9 +87,6 @@ export default function Navbar() {
 
             <p>|</p>
             <li>
-              <a href="/a-propos">À propos</a>
-            </li>
-            <li>
               <a href="/articles">Articles</a>
             </li>
             <li>
@@ -104,7 +98,7 @@ export default function Navbar() {
 
       {/* BURGER */}
       <div
-        className={`burger fixed right-[6vw] text-text top-[2.35rem] z-50 xl:hidden tham tham-e-squeeze tham-w-8 ${
+        className={`burger fixed right-12 md:right-[6vw] text-text top-[2.35rem] z-50 xl:hidden tham tham-e-squeeze tham-w-8 ${
           opened ? "tham-active" : ""
         }`}
         onClick={() => setOpened(!opened)}
